@@ -1,0 +1,64 @@
+  <div class="container card border-success mb-3 mt-4 col-sm-8" style="max-width: 55rem; background-color: #f0f8ff ;">
+    <div class="card-header text-center">
+      <h1>Atualizar Loja</h1>
+    </div>
+      <form class="row g-3 mt-2" action="/store/update" method="POST" >
+      <input type="hidden" name="id" value="{{update._id}}">
+        <div class="col-sm-6">
+          <label for="razaoSocial" class="form-label">Razão Social:</label>
+          <input type="text" id="razaoSocial" name="razaoSocial" class="form-control" value="{{update.razaoSocial}}">
+
+          <label for="nomeFantasia" class="form-label">Nome Fantasia:</label>
+          <input type="text" name="nomeFantasia" class="form-control" value="{{update.nomeFantasia}}">
+        </div>
+        <div class="col-sm-6">
+          <label for="cnpj" class="form-label">CNPJ:</label>
+          <input type="number" name="cnpj" class="form-control" minlength="13" maxlength="13" value="{{update.cnpj}}">
+
+          <label for="inscEst" class="form-label">Insc Est:</label>
+          <input type="text" name="inscEst" class="form-control" value="{{update.inscEst}}">
+        </div>
+        <div class="col-sm-6"> 
+          <label for="endereco" class="form-label">Endereço:</label>
+          <input type="text" name="endereco" class="form-control" value="{{update.endereco}}">
+
+          <label for="numero" class="form-label">N°:</label>
+          <input type="number" name="numero" class="form-control" value="{{update.numero}}">
+
+          <label for="uf" class="form-label" class="form-control">UF:</label>
+          <input type="text" name="uf" class="form-control" value="{{update.uf}}">
+        </div>  
+        <div class="col-sm-6">
+          <label for="bairro" class="form-label">Bairro:</label>
+          <input type="text" name="bairro" class="form-control" value="{{update.bairro}}">
+
+          <label for="cidade" class="form-label">Cidade:</label>
+          <input type="text" name="cidade" class="form-control" value="{{update.cidade}}">
+
+          <label for="cep" class="form-label" class="form-label">CEP:</label>
+          <input type="number" name="cep" class="form-control" minlength="8" maxlength="8" value="{{update.cep}}">  
+        </div>
+        {{>select}}
+        {{>person}}
+        {{>checkbox}}
+        {{>bank}}
+        <div class="col-sm-12">
+          <label for="obs" class="form-label">Observação:</label>
+          <textarea  type="text" name="obs" class="form-control"  rows="3">{{update.obs}}</textarea>
+        </div>
+        <div class="col-sm-12">
+          <label for="dataAtualizacao" class="form-label">Data de Atualização:</label>
+          <input type="date" name="dataAtualizacao" class="form-control" value="{{update.dataAtualizacao}}">
+          <input type="hidden" name="nomeUsuario" value="{{nomeUsuario}}">
+        </div>
+        <div class="card-footer bg-transparent border-success text-center col-12 mt-2">
+          <button type="submit" class="btn btn-success">Confirmar Edição</button>
+        </div>
+      </form>
+      <div class="container card-footer border-light text-center">
+        <a href="/store/delete/{{update._id}}">
+          <button class="btn btn-danger">Deletar Loja</button>
+        </a>
+      </div>
+  </div>
+  

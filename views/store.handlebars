@@ -1,0 +1,41 @@
+  <div class="container card-header mt-4 col-sm-12">
+    <a href="/store/filter"><button class="btn btn-light">ASSOCIATIVISMO</button></a>
+    <a href="/store/filter1"><button class="btn btn-light">FRANQUIADO</button></a>
+    <a href="/store/filter2"><button class="btn btn-light">INATIVO</button></a>
+  </div>
+   <div class="container card mt-4 col-sm-12">
+    <table  class="table table-striped">
+      <thead>
+        <tr>
+          <th>Razão Social</th>
+          <th>Nome Fantasia</th>
+          <th>CNPJ</th>
+          <th>Endereço</th>
+          <th>UF</th>
+          <th>Bairro</th>
+          <th>Cidade</th>
+          <th>CEP</th>
+          <th>Forma de Cadastro</th>
+          <th>Consultor</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each store}}
+          <tr> 
+            <td>{{razaoSocial}}</td>
+            <td>{{nomeFantasia}}</td>
+            <td>{{cnpj}}</td>
+            <td>{{endereco}}</td>
+            <td>{{uf}}</td>
+            <td>{{bairro}}</td>
+            <td>{{cidade}}</td>
+            <td>{{cep}}</td>
+            <td>{{cadastro}}</td>
+            <td>{{consultor}}</td>
+            <td><a href="/store/update/{{_id}}"><img src="/img/edit.png" width="30" height="18"></a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>

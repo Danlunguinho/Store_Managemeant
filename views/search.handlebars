@@ -1,0 +1,37 @@
+<div class="container mt-4 card">
+    <table  class="table table-striped">
+      <thead>
+        <tr>
+          <th>Razão Social</th>
+          <th>Nome Fantasia</th>
+          <th>CNPJ</th>
+          <th>Insc Est</th>
+          <th>Endereço</th>
+          <th>N°</th>
+          <th>UF</th>
+          <th>Bairro</th>
+          <th>Cidade</th>
+          <th>CEP</th>
+          <th>Forma de Cadastro</th>
+          <th>Consultor</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr> 
+            <td>{{search.razaoSocial}}</td>
+            <td>{{search.nomeFantasia}}</td>
+            <td>{{search.cnpj}}</td>
+            <td>{{search.inscEst}}</td>
+            <td>{{search.endereco}}</td>
+            <td>{{search.numero}}</td>
+            <td>{{search.uf}}</td>
+            <td>{{search.bairro}}</td>
+            <td>{{search.cidade}}</td>
+            <td>{{search.cep}}</td>
+            <td>{{search.cadastro}}</td>
+            <td>{{search.consultor}}</td>
+            <td><a href="/store/update/{{search._id}}"><img src="/img/edit.png" width="30" height="18"></a></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,55 @@
+const mongoose = require('mongoose')
+
+//Definição das variaveis e do banco de dados para as lojas
+const Store = mongoose.model('store', {
+
+    nomeFantasia: String,
+    cnpj: Number,
+    cidade: String,
+    razaoSocial: String,
+    inscEst: String,
+    endereco: String,
+    numero: Number,
+    uf: String,
+    bairro: String,
+    cep: Number,
+    cadastro: [String],
+    consultor: [String],
+    socioAdministrador: String,
+    telefone: String,
+    telefone2: String,
+    telefone3: String,
+    cpf: Number,
+    email: String,
+    nomeComprador: String,
+    contatoComprador: Number,   
+    emailComprador: String,
+    nomeFinanceiro: String,
+    contatoFinanceiro: Number,
+    emailFinanceiro: String,
+    recarga: [String],
+    qualEmpresa: String,
+    layoutExterno: [String],
+    autosserviço: [String],
+    fardamento: [String],
+    entregaDomicilio: [String],
+    operadoraCartao: [String],
+    qualOperadora: String,
+    sistemaOperacional: [String],
+    qualSistema: String,
+    atendimento24: [String],
+    banco: String,
+    agencia: Number,
+    numeroConta: Number,
+    favorecido: String,
+    cpf_cnpj: Number,
+    taxaAdesao: Number,
+    mensalidade: Number,
+    obs: String,
+    dataCadastro: Date,
+    dataAtualizacao: Date,
+    nomeUsuario: String
+})
+
+//Exportar o acesso ao modelo da loja
+module.exports = Store

@@ -1,0 +1,58 @@
+  
+  <div class="container card border-success mb-3 mt-4 col-sm-8" style="max-width: 55rem; background-color: #f0f8ff ;">
+    <div class="card-header text-center">
+      <h1>Cadastro de Nova Loja</h1>
+    </div>
+      <form class="row g-3 mt-2" action="/store" method="POST">
+        <div class="col-sm-6">
+          <label for="razaoSocial" class="form-label">Razão Social:</label>
+          <input type="text" name="razaoSocial" class="form-control">
+
+          <label for="nomeFantasia" class="form-label">Nome Fantasia:</label>
+          <input type="text" name="nomeFantasia" class="form-control">
+        </div>
+        <div class="col-sm-6">
+          <label for="cnpj" class="form-label">CNPJ:</label>
+          <input type="number" name="cnpj" class="form-control" minlength="13" maxlength="13">
+
+          <label for="inscEst" class="form-label">Insc Est:</label>
+          <input type="text" name="inscEst" class="form-control">
+        </div>
+        <div class="col-sm-6"> 
+          <label for="endereco" class="form-label">Endereço:</label>
+          <input type="text" name="endereco" class="form-control">
+
+          <label for="numero" class="form-label">N°:</label>
+          <input type="number" name="numero" class="form-control">
+
+          <label for="uf" class="form-label" class="form-control">UF:</label>
+          <input type="text" name="uf" class="form-control">
+        </div>  
+        <div class="col-sm-6">
+          <label for="bairro" class="form-label">Bairro:</label>
+          <input type="text" name="bairro" class="form-control">
+
+          <label for="cidade" class="form-label">Cidade:</label>
+          <input type="text" name="cidade" class="form-control">
+
+          <label for="cep" class="form-label" class="form-label">CEP:</label>
+          <input type="number" name="cep" class="form-control" minlength="8" maxlength="8">  
+        </div>
+        {{>select}}
+        {{>person}}
+        {{>checkbox}}
+        {{>bank}}
+        <div class="col-sm-12">
+          <label for="obs" class="form-label">Observação:</label>
+          <textarea  type="text" name="obs" class="form-control"  rows="3"></textarea>
+        </div>
+        <div class="col-sm-12">
+          <label for="dataCadastro" class="form-label">Data de Cadastro:</label>
+          <input type="date" name="dataCadastro" class="form-control">
+          <input type="hidden" name="nomeUsuario" value="{{nomeUsuario}}">
+        </div>
+        <div class="card-footer bg-transparent border-success text-center col-12 mt-2">
+          <button type="submit" class="btn btn-success">Cadastrar Loja</button>
+        </div>
+      </form>
+  </div>

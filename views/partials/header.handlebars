@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #fbec5d; height: 4rem;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/home">
+      <img src="/img/redemed_logo.png" alt="" width="45" height="39">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    {{#if user}}
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-underline me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="/home" style="color:black;">Lojas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/store" style="color:black;">Cadastrar</a>
+        </li>
+      </ul>
+      <ul class="nav nav-underline justify-content-end me-3">
+        <li class="nav-item">
+          <a class="nav-link" href="/user/logout" style="color:black;">Sair</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/user/new" style="color:black;">
+            <img src="/img/adduser.png" alt="" width="27" height="27">
+          </a>
+        </li>
+      </ul>
+      <form class="d-flex" action="/store/search" method="GET">
+        <input id="cnpj" type="search" name="cnpj" class="form-control me-2" placeholder="Insira o CNPJ da loja">
+        <input type="submit" class="btn btn-outline-success" value="Search">
+      </form>
+    </div>
+    {{/if}}
+  </div>
+</nav> 

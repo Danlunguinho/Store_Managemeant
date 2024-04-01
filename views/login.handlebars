@@ -1,0 +1,18 @@
+{{#each erros}}
+  <div class="container alert alert-danger text-center mt-2 col-sm-4">{{texto}}</div>
+{{else}}
+{{/each}}
+<div class="container card border-success mb-3 mt-4 col-sm-4" style="max-width: 40rem; background-color: #f0f8ff ;">
+    <div class="card-header text-center">
+        <h1>Login</h1>
+    </div>
+      <form class="row g-3 mt-4" action="/user/login" method="POST">
+        <div class="col-sm-12 mb-4">
+          <input type="text" name="usuario" class="form-control" placeholder="Nome de Usuario" required>
+          <input type="password" name="senha" class="form-control mt-4" placeholder="Senha" required>
+        </div>
+        <div class="card-footer bg-transparent border-success text-center col-12 mt-2">
+          <button type="submit" class="btn btn-success">Entrar</button>
+        </div>
+      </form>
+</div>
