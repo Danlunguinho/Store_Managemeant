@@ -65,12 +65,12 @@ const userRoutes = require('./routes/userRoutes')
 app.use('/user', userRoutes)
 
 //Conexão com banco de dados
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 7000
 
 const DB_USER = process.env.DB_USER
 const DB_PASSWORD = encodeURIComponent(process.env.DB_PASSWORD)
 mongoose
-    .connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cadastrodelojas.ue9gjmb.mongodb.net/`
+    .connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@cluster7.dcwuppg.mongodb.net/`
     )
     .then(() => {
 
